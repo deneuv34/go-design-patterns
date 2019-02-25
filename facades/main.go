@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// BrandCar interface
+type BrandCar interface {
+	CreateBrandedCar() string
+}
+
 // PaintStruct struct type
 type PaintStruct struct {
 	color string
@@ -13,6 +18,7 @@ type CarStruct struct {
 	body       string
 }
 
+// Car struct
 type Car struct{}
 
 func (carType Car) create(c CarStruct) string {
@@ -38,7 +44,7 @@ func (a Accessories) addLogo() string {
 type CreateCarFacade struct {
 }
 
-// CreateSomeCar function
+// CreateBrandedCar function
 func (s CreateCarFacade) CreateBrandedCar() string {
 	car := Car{}
 	paintCar := PaintCar{}
