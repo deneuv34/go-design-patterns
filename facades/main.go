@@ -57,9 +57,13 @@ func (s CreateCarFacade) CreateBrandedCar() string {
 	return finishAdded
 }
 
+func createOrderCar(car BrandCar) string {
+	return car.CreateBrandedCar()
+}
+
 // implementation
 func main() {
 	var facade CreateCarFacade
-	fmt.Println(facade.CreateBrandedCar())
+	fmt.Println(createOrderCar(facade))
 	return
 }
