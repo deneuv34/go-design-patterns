@@ -74,5 +74,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(string(jsonMessage.Body))
+	fmt.Println(string(jsonMessage.Body)) // {"body":"Hello, How are you","footer":"Regards, Adhitya","header":"Dear Rangga"}
 }
